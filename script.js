@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Story Slider
     initStorySlider();
     
+    // AI Features Tabs
+    initAITabs();
+    
     // Smooth Scrolling for Navigation
     initSmoothScrolling();
     
@@ -55,29 +58,6 @@ function initMobileMenu() {
         });
     }
 }
-
-// Mobile Menu Functions for new menu
-function toggleMobileMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenu.classList.toggle('active');
-}
-
-function closeMobileMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenu.classList.remove('active');
-}
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', function(e) {
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    
-    if (mobileMenu && mobileMenuBtn && 
-        !mobileMenu.contains(e.target) && 
-        !mobileMenuBtn.contains(e.target)) {
-        mobileMenu.classList.remove('active');
-    }
-});
 
 // Hero Image Slider
 function initHeroSlider() {
@@ -483,5 +463,89 @@ window.addEventListener('scroll', function() {
         maxScrollDepth = scrollDepth;
     }
 });
+
+// AI Features Tabs
+function initAITabs() {
+    const tabs = document.querySelectorAll('.ai-tab');
+    const contents = document.querySelectorAll('.ai-tab-content');
+    
+    if (tabs.length === 0) return;
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all tabs and contents
+            tabs.forEach(t => t.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Show corresponding content
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+}
+
+// AI Section Toggle Function
+function toggleAISection() {
+    const content = document.getElementById('aiExpandableContent');
+    const btn = document.querySelector('.expand-btn');
+    const expandText = btn.querySelector('.expand-text');
+    
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        content.classList.add('show');
+        btn.classList.add('expanded');
+        expandText.textContent = '閉じる';
+    } else {
+        content.style.display = 'none';
+        content.classList.remove('show');
+        btn.classList.remove('expanded');
+        expandText.textContent = '詳しく見る';
+    }
+}
+
+// Benefits Section Toggle Function
+function toggleBenefitsSection() {
+    const content = document.getElementById('benefitsExpandableContent');
+    const btn = document.querySelector('.ai-benefits-section .expand-btn');
+    const expandText = btn.querySelector('.expand-text');
+    
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        content.classList.add('show');
+        btn.classList.add('expanded');
+        expandText.textContent = '閉じる';
+    } else {
+        content.style.display = 'none';
+        content.classList.remove('show');
+        btn.classList.remove('expanded');
+        expandText.textContent = '詳しく見る';
+    }
+}
+
+// Story Section Toggle Function
+function toggleStorySection() {
+    const content = document.getElementById('storyExpandableContent');
+    const btn = document.querySelector('.story-expand-btn');
+    const expandText = btn.querySelector('.expand-text');
+    
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        content.classList.add('show');
+        btn.classList.add('expanded');
+        expandText.textContent = '閉じる';
+    } else {
+        content.style.display = 'none';
+        content.classList.remove('show');
+        btn.classList.remove('expanded');
+        expandText.textContent = '続きを見る';
+    }
+}
 
 console.log('Terroir HUB script loaded successfully');
