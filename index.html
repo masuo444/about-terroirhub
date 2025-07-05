@@ -3,283 +3,829 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terroir HUB - 多言語サイト×AIソムリエ構築サービス</title>
-    <meta name="description" content="お酒の写真と商品リストを送るだけ。世界32言語×貴社専用AIソムリエが最短7日で完成。">
+    <title>Terroir HUB - 味を生む背景を、世界と言葉でつなぐ</title>
+    <meta name="description" content="写真と商品情報を送るだけで、味やこだわりが伝わる多言語AIサイトが完成。日本酒蔵の想いを世界32言語で届けます。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <h1 class="brand-title">Terroir HUB</h1>
-                <p class="brand-subtitle">BY FOMUS</p>
+    <!-- Fixed Header -->
+    <header class="fixed-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-hierarchy">
+                    <span class="company-name">FOMUS</span>
+                    <span class="logo-divider">|</span>
+                    <span class="service-name">Terroir HUB</span>
+                </div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#service">サービス概要</a></li>
+                <li><a href="#ai-features">AI機能</a></li>
+                <li><a href="#story">ストーリー</a></li>
+                <li><a href="#scenes">活用シーン</a></li>
+                <li><a href="https://www.terroirhub.com/">SakeLink</a></li>
             </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-            <a href="#contact" class="nav-cta">CONTACT</a>
+            <div class="nav-cta">
+                <a href="#contact" class="btn-primary">無料相談する</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
-        
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a href="#features" onclick="closeMobileMenu()">Features</a></li>
-                <li><a href="#pricing" onclick="closeMobileMenu()">Pricing</a></li>
-                <li><a href="#process" onclick="closeMobileMenu()">Process</a></li>
-                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
-            </ul>
-        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-badge">
-                🌐 多言語サイト×AIソムリエ構築サービス
-            </div>
-            
-            <h1 class="hero-title">
-                お酒の写真と商品リストを送るだけ。
-                <span class="highlight">世界32言語</span> × <span class="highlight">貴社専用AIソムリエ</span>が<span class="highlight">最短7日</span>で完成。
-            </h1>
-            
-            <p class="hero-subtitle">
-                ✨ 海外バイヤー・プロフェッショナル・VIP——言語の壁をゼロにし、機会損失をなくす。
-            </p>
-            
-            <div class="hero-features">
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>多言語ワンクリック</h3>
-                    <p>DeepL&用語集で専門表現も正確</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AIソムリエ24h</h3>
-                    <p>米品種・酸度・ペアリングを即回答</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>ROI計算機能</h3>
-                    <p>売上向上シミュレーション付き</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">💼</div>
-                    <h3>展示会特化</h3>
-                    <p>QRでプロ対応、商談効率アップ</p>
-                </div>
-            </div>
-            
-            <div class="hero-cta">
-                <a href="#contact" class="btn-primary">無料相談・見積もり</a>
-                <a href="roi-simulator.html" class="btn-secondary">ROI計算してみる</a>
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-images">
+                <div class="hero-image active" style="background-image: url('images/sake-brewery-hands.jpg')"></div>
+                <div class="hero-image" style="background-image: url('images/sake-bottles-close.jpg')"></div>
+                <div class="hero-image" style="background-image: url('images/rice-water-terroir.jpg')"></div>
             </div>
         </div>
-    </section>
-
-
-    <!-- Features Section -->
-    <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">サービス特徴</h2>
-            
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-number">01</div>
-                    <h3>写真＋Excelで簡単構築</h3>
-                    <p>商品写真とExcelテンプレートを送るだけ。専門知識は一切不要です。</p>
-                </div>
-                
-                <div class="feature-item sakelink-highlight">
-                    <div class="feature-number">02</div>
-                    <div class="new-service-badge">🆕 SakeLink</div>
-                    <h3>日本酒特化の多言語サイト構築</h3>
-                    <p>精米歩合・原料米・酸度など、日本酒の専門用語を32言語で正確に翻訳。蔵元ブランドに特化したオリジナルデザインを提供。</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-number">03</div>
-                    <h3>AIソムリエによる24時間対応</h3>
-                    <p>酸度、香り、ペアリング提案まで、専門知識をAIが母国語で説明します。</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-number">04</div>
-                    <h3>ROIシミュレーション機能</h3>
-                    <p>売上向上効果を即座に計算。投資対効果を明確に可視化します。</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-number">05</div>
-                    <h3>展示会・イベント特化機能</h3>
-                    <p>QRコードでスマートに情報提供。プロフェッショナルな対応を実現。</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-number">06</div>
-                    <h3>モバイル完全対応</h3>
-                    <p>スマートフォン、タブレットでの表示に完全最適化。</p>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    写真と商品情報を送るだけで、<br>
+                    <span class="highlight">"味"や"こだわり"が伝わる</span><br>
+                    多言語AIサイトが完成。
+                </h1>
+                <p class="hero-subtitle">
+                    Terroir HUBは、訪日観光客や海外バイヤーとの接客をサポートします。
+                </p>
+                <p class="hero-message">
+                    "言葉の壁"がなくなれば、感動はもっと深くなる。
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary-large">
+                        <span class="btn-icon">💬</span>
+                        無料相談する
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section id="process" class="process">
+    <!-- Service Overview Section -->
+    <section class="service-overview" id="service">
         <div class="container">
-            <h2 class="section-title">導入プロセス</h2>
-            <p class="section-subtitle">最短7営業日でサイト完成</p>
-            
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>オンライン相談（無料）</h3>
-                    <p>30分でニーズを明確化</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>写真＋Excelテンプレート提出</h3>
-                    <p>簡単なフォーマットで情報整理</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>約7営業日で仮サイト作成</h3>
-                    <p>進捗を随時ご報告</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>修正対応＆公開</h3>
-                    <p>ご確認いただき本番環境へ</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <h3>AIソムリエ・QR運用開始</h3>
-                    <p>24時間体制でサポート開始</p>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Terroir HUBとは？</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2 class="section-title">料金プラン</h2>
             
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>ライトプラン</h3>
-                    <div class="price">¥300,000</div>
-                    <ul class="features-list">
-                        <li>基本サイト構築</li>
-                        <li>5言語対応</li>
-                        <li>商品登録20点まで</li>
-                        <li>基本AIソムリエ</li>
-                    </ul>
-                    <a href="#contact" class="btn-outline">相談する</a>
-                </div>
-                
-                <div class="pricing-card featured">
-                    <div class="popular-badge">人気</div>
-                    <h3>スタンダードプラン</h3>
-                    <div class="price">¥500,000</div>
-                    <ul class="features-list">
-                        <li>フル機能サイト構築</li>
-                        <li>32言語対応</li>
-                        <li>商品登録無制限</li>
-                        <li>高度AIソムリエ</li>
-                        <li>ROIシミュレーター</li>
-                        <li>QRコード機能</li>
-                    </ul>
-                    <a href="#contact" class="btn-primary">相談する</a>
-                </div>
-                
-                <div class="pricing-card">
-                    <h3>プレミアムプラン</h3>
-                    <div class="price">¥1,000,000</div>
-                    <ul class="features-list">
-                        <li>エンタープライズ仕様</li>
-                        <li>完全カスタマイズ</li>
-                        <li>専属サポート</li>
-                        <li>マルチブランド対応</li>
-                        <li>分析・レポート機能</li>
-                    </ul>
-                    <a href="#contact" class="btn-outline">相談する</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">お問い合わせ</h2>
-            <p class="section-subtitle">まずは無料相談から始めませんか？</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>無料相談実施中</h3>
-                    <ul>
-                        <li>✅ 現状の課題ヒアリング</li>
-                        <li>✅ 最適なプランのご提案</li>
-                        <li>✅ ROI効果の試算</li>
-                        <li>✅ 導入スケジュールの調整</li>
-                    </ul>
+            <div class="platform-description">
+                <div class="platform-intro-new">
+                    <p><strong>Terroir&nbsp;HUB（テロワール・ハブ）</strong>は、日本各地の酒蔵・蒸留所・工芸品など、地域に根ざした「テロワール（風土）」を持つ商品や体験を、"世界に伝える"ことを目的とした<span style="white-space: nowrap;">デジタル プラットフォームです。</span></p>
                     
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <strong>📧 メール</strong>
-                            <p>fomus.official@gmail.com</p>
+                    <div class="process-flow">
+                        <p>写真と商品情報を送るだけで、</p>
+                        <p>世界中の言語に対応したブランド専用ページが完成し、</p>
+                        <p>AIによる多言語接客・自動回答・問い合わせ対応が可能に。</p>
+                    </div>
+                    
+                    <div class="solution-statement">
+                        <p>これまで<strong>言語の壁や情報不足で失われていた「海外販売のチャンス」</strong>を、デジタルの力でゼロにします。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-timeline">
+                <h3>最短7日で完成</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h4>オンライン相談（無料）</h4>
+                            <p>30分でニーズを明確化</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h4>写真＋Excelテンプレート提出</h4>
+                            <p>簡単なフォーマットで情報整理</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h4>約7営業日で仮サイト作成</h4>
+                            <p>進捗を随時ご報告</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-content">
+                            <h4>修正対応＆公開</h4>
+                            <p>ご確認いただき本番環境へ</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-content">
+                            <h4>AIソムリエ・QR運用開始</h4>
+                            <p>24時間体制でサポート開始</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features Section -->
+    <section class="ai-features-section" id="ai-features">
+        <div class="container">
+            <div class="section-header">
+                <div class="sakura-illustration">
+                    <img src="sakura.png" alt="桜のイラスト" class="sakura-image">
+                </div>
+                <div class="section-header-content">
+                    <span class="section-tag">🤖 核心技術</span>
+                    <h2 class="section-title">AIサクラ（AIチャットボット）</h2>
+                    <p class="section-subtitle">お酒の基礎知識と貴社情報を完璧に理解し、全言語で対応する次世代AI</p>
+                </div>
+            </div>
+            
+            <div class="ai-tabs-container">
+                <div class="ai-tabs">
+                    <button class="ai-tab active" data-tab="knowledge">
+                        <span class="tab-icon">📚</span>
+                        <span class="tab-title">基礎知識機能</span>
+                        <span class="tab-subtitle">お酒の専門知識を完全網羅</span>
+                    </button>
+                    <button class="ai-tab" data-tab="custom">
+                        <span class="tab-icon">🌸</span>
+                        <span class="tab-title">貴社専用機能</span>
+                        <span class="tab-subtitle">企業・商品情報をカスタマイズ</span>
+                    </button>
+                </div>
+                
+                <div class="ai-content">
+                    <div class="ai-tab-content active" id="knowledge">
+                        <div class="ai-feature-layout">
+                            <div class="ai-feature-text">
+                                <h3>お酒の基礎知識を完全網羅</h3>
+                                <p class="feature-intro">日本酒、焼酎、ワイン、ウイスキーなど、あらゆるお酒に関する専門知識をAIサクラが学習済み。お客様のどんな質問にも、正確で分かりやすい回答を提供します。</p>
+                                
+                                <div class="feature-details">
+                                    <div class="detail-item">
+                                        <div class="detail-icon">📚</div>
+                                        <div class="detail-content">
+                                            <h4>豊富な知識データベース</h4>
+                                            <p>製造方法、原料、歴史、文化的背景まで幅広くカバー</p>
+                                        </div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-icon">🌐</div>
+                                        <div class="detail-content">
+                                            <h4>32言語対応</h4>
+                                            <p>専門用語も含めて正確な翻訳で、世界中のお客様に対応</p>
+                                        </div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-icon">⚡</div>
+                                        <div class="detail-content">
+                                            <h4>24時間即座に回答</h4>
+                                            <p>時間を問わず、瞬時に専門的な回答を提供</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ai-feature-visual">
+                                <div class="chatbot-demo">
+                                    <div class="demo-chat">
+                                        <div class="chat-header">
+                                            <div class="chat-header-left">
+                                                <img src="sakura.png" alt="AIサクラ" class="chat-sakura-icon">
+                                                <span>AIサクラ</span>
+                                            </div>
+                                            <span class="online-status">● オンライン</span>
+                                        </div>
+                                        <div class="chat-messages">
+                                            <div class="message user">
+                                                <p>精米歩合って何ですか？</p>
+                                            </div>
+                                            <div class="message ai">
+                                                <p>精米歩合とは、玄米を削って残った部分の割合です。60%なら40%削った状態で、数値が低いほど高級酒とされます。</p>
+                                            </div>
+                                            <div class="message user">
+                                                <p>What is rice polishing ratio?</p>
+                                            </div>
+                                            <div class="message ai">
+                                                <p>Rice polishing ratio is the percentage of grain remaining after milling. Lower numbers indicate higher quality sake.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-tab-content" id="custom">
+                        <div class="ai-feature-layout">
+                            <div class="ai-feature-text">
+                                <h3>貴社専用にカスタマイズされたAIサクラ</h3>
+                                <p class="feature-intro">貴社の商品情報、企業理念、歴史、こだわりを深く学習したAIサクラが、まるで貴社のスタッフのように、お客様との対話を行います。</p>
+                                
+                                <div class="feature-details">
+                                    <div class="detail-item">
+                                        <div class="detail-icon">🏢</div>
+                                        <div class="detail-content">
+                                            <h4>企業情報の完全習得</h4>
+                                            <p>創業の歴史、こだわり、製造プロセスまで詳細に学習</p>
+                                        </div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-icon">🍶</div>
+                                        <div class="detail-content">
+                                            <h4>全商品の詳細把握</h4>
+                                            <p>味わい、製法、ペアリング提案まで商品ごとに最適化</p>
+                                        </div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-icon">💡</div>
+                                        <div class="detail-content">
+                                            <h4>パーソナライズ提案</h4>
+                                            <p>お客様の好みに合わせて最適な商品を推薦</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ai-feature-visual">
+                                <div class="sakura-demo">
+                                    <div class="demo-chat">
+                                        <div class="chat-header">
+                                            <div class="chat-header-left">
+                                                <img src="sakura.png" alt="AIサクラ" class="chat-sakura-icon">
+                                                <span>AIサクラ</span>
+                                            </div>
+                                            <span class="company-badge">貴社専用</span>
+                                        </div>
+                                        <div class="chat-messages">
+                                            <div class="message user">
+                                                <p>おすすめの日本酒は？</p>
+                                            </div>
+                                            <div class="message ai">
+                                                <p>弊蔵の看板商品「匠の雫 純米大吟醸」をおすすめします。創業150年の伝統製法で醸した逸品です。</p>
+                                            </div>
+                                            <div class="message user">
+                                                <p>What's special about your brewery?</p>
+                                            </div>
+                                            <div class="message ai">
+                                                <p>Our brewery was founded in 1873, using traditional methods passed down through generations with pristine mountain water.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI Sakura Benefits Section -->
+            <div class="ai-benefits-section" data-aos="fade-up">
+                <div class="benefits-header">
+                    <h2 class="benefits-title">AIサクラを導入すると、<br>こんな未来が待っています</h2>
+                    <p class="benefits-subtitle">たった一つのシステムで、売上向上と顧客満足度の両方を実現</p>
+                    <div class="expand-toggle">
+                        <button class="expand-btn" onclick="toggleBenefitsSection()">
+                            <span class="expand-text">詳しく見る</span>
+                            <span class="expand-icon">▼</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="benefits-expandable-content" id="benefitsExpandableContent" style="display: none;">
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card-large" data-aos="fade-up">
+                        <div class="benefit-icon-large">💰</div>
+                        <h3>売上の劇的向上</h3>
+                        <div class="benefit-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">3倍</span>
+                                <span class="stat-label">海外顧客からの問い合わせ増加</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24時間</span>
+                                <span class="stat-label">機会損失ゼロの営業体制</span>
+                            </div>
+                        </div>
+                        <p>言葉の壁がなくなることで、これまで逃していた海外顧客を確実に獲得。深夜や休日の問い合わせも逃さず、売上チャンスを最大化します。</p>
+                    </div>
+                    
+                    <div class="benefit-card-large" data-aos="fade-up" data-aos-delay="200">
+                        <div class="benefit-icon-large">⭐</div>
+                        <h3>顧客満足度の飛躍的改善</h3>
+                        <div class="benefit-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">顧客の質問解決率</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">即座</span>
+                                <span class="stat-label">専門的な回答を提供</span>
+                            </div>
+                        </div>
+                        <p>お客様が知りたい情報を、その場で、その言語で、正確に提供。「もっと知りたかったのに...」という残念な体験を完全に解消します。</p>
+                    </div>
+                    
+                    <div class="benefit-card-large" data-aos="fade-up" data-aos-delay="400">
+                        <div class="benefit-icon-large">🚀</div>
+                        <h3>競合他社との圧倒的差別化</h3>
+                        <div class="benefit-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">32言語</span>
+                                <span class="stat-label">対応可能な言語数</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">唯一</span>
+                                <span class="stat-label">この技術を持つ酒蔵</span>
+                            </div>
+                        </div>
+                        <p>他の酒蔵にはない最先端AI技術で、お客様に「特別感」を提供。インバウンド市場で確実に頭一つ抜け出せます。</p>
+                    </div>
+                </div>
+                
+                <div class="transformation-showcase" data-aos="fade-up">
+                    <h3 class="transformation-title">🎯 導入前後の変化</h3>
+                    <div class="transformation-comparison">
+                        <div class="before-after">
+                            <div class="before">
+                                <h4>導入前の現実</h4>
+                                <ul>
+                                    <li>❌ 外国人観光客との会話に四苦八苦</li>
+                                    <li>❌ 深夜・休日の問い合わせは対応不可</li>
+                                    <li>❌ 専門用語の説明で時間がかかる</li>
+                                    <li>❌ お客様の満足度がわからない</li>
+                                    <li>❌ 機会損失の量が把握できない</li>
+                                </ul>
+                            </div>
+                            <div class="transformation-arrow">→</div>
+                            <div class="after">
+                                <h4>導入後の劇的変化</h4>
+                                <ul>
+                                    <li>✅ どんな言語でも完璧にコミュニケーション</li>
+                                    <li>✅ 24時間365日、休むことのない営業マン</li>
+                                    <li>✅ 複雑な専門知識も瞬時に分かりやすく説明</li>
+                                    <li>✅ 顧客満足度とエンゲージメントが大幅向上</li>
+                                    <li>✅ 売上とブランド価値の同時向上を実現</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="urgency-section" data-aos="fade-up">
+                    <div class="urgency-content">
+                        <h3>🔥 今こそ、AIサクラで未来を掴む時</h3>
+                        <p class="urgency-text">
+                            インバウンド需要が急回復している今、<strong>言語対応力</strong>が売上を左右します。<br>
+                            AIサクラがあれば、訪れるすべての外国人観光客を確実に「ファン」に変えられます。
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Value Journey Section -->
+                <div class="value-journey-section">
+                    <div class="value-header">
+                        <span class="value-tag">✨ 継続的価値</span>
+                        <h3>現地体験から始まる、<br>永続的なつながり</h3>
+                        <p>AIサクラにより、お客様との関係は訪問で終わらない</p>
+                    </div>
+                    
+                    <div class="value-journey-steps">
+                        <div class="journey-step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-icon">🏛️</div>
+                            <div class="step-content">
+                                <h4>現地訪問・体験</h4>
+                                <p>蔵見学や試飲で、お客様は貴社の魅力を体感</p>
+                                <div class="step-quote">「この酒蔵のことをもっと知りたい」</div>
+                            </div>
                         </div>
                         
-                        <div class="contact-method">
-                            <strong>🏢 運営会社</strong>
-                            <p>合同会社FOMUS</p>
+                        <div class="journey-arrow">→</div>
+                        
+                        <div class="journey-step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-icon">🌍</div>
+                            <div class="step-content">
+                                <h4>帰国後も継続</h4>
+                                <p>自国に戻っても、QRコードからいつでもアクセス</p>
+                                <div class="step-quote">「あの酒の製法はどうなっていたっけ？」</div>
+                            </div>
+                        </div>
+                        
+                        <div class="journey-arrow">→</div>
+                        
+                        <div class="journey-step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-icon">📱</div>
+                            <div class="step-content">
+                                <h4>いつでも、どこでも</h4>
+                                <p>スマートフォン一つで詳しい情報をすぐに取得</p>
+                                <div class="step-quote">「友人にも紹介したい、商品情報を確認しよう」</div>
+                            </div>
+                        </div>
+                        
+                        <div class="journey-arrow">→</div>
+                        
+                        <div class="journey-step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-icon">🛒</div>
+                            <div class="step-content">
+                                <h4>購買・拡散へ</h4>
+                                <p>オンライン販売やSNS共有で売上・認知度向上</p>
+                                <div class="step-quote">「この蔵の酒を注文したい」</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="success-scenario" data-aos="fade-up">
+                        <div class="scenario-content">
+                            <h3>🎯 実現可能なシナリオ</h3>
+                            <div class="scenario-example">
+                                <div class="scenario-text">
+                                    <h4>フランスの愛好家・ピエールさんのケース</h4>
+                                    <ol>
+                                        <li><strong>現地訪問：</strong>日本旅行で貴蔵を見学、純米大吟醸に感動</li>
+                                        <li><strong>帰国後：</strong>パリの自宅でQRコードをスキャン、製法や歴史を詳しく学習</li>
+                                        <li><strong>情報収集：</strong>AIサクラに質問「この酒に合うチーズは？」→的確な回答</li>
+                                        <li><strong>購入・共有：</strong>フランスの酒販店に注文を依頼、SNSで友人に紹介</li>
+                                        <li><strong>拡散効果：</strong>友人たちも興味を持ち、次回の日本旅行で蔵訪問を計画</li>
+                                    </ol>
+                                </div>
+                                <div class="scenario-impact">
+                                    <div class="impact-item">
+                                        <span class="impact-number">1</span>
+                                        <span class="impact-text">回の訪問</span>
+                                    </div>
+                                    <div class="impact-arrow">→</div>
+                                    <div class="impact-item">
+                                        <span class="impact-number">∞</span>
+                                        <span class="impact-text">継続的関係</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Story Section -->
+    <section class="story-section" id="story">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">🍶 開発者ストーリー</span>
+                <h2 class="section-title">なぜこのサービスを作ったのか？</h2>
+                <p class="section-subtitle">日本酒の魅力を"余すことなく"伝えるために</p>
+            </div>
+            
+            <div class="elegant-story-layout">
+                <div class="story-summary">
+                    <div class="story-intro-card">
+                        <div class="developer-intro">
+                            <div class="developer-photo">
+                                <img src="profile.jpg" alt="開発者プロフィール" class="profile-image">
+                                <div class="developer-profile">
+                                    <h4 class="developer-name">増尾圭亮（まっすー）</h4>
+                                    <p class="developer-title">FOMUS代表 / Terroir HUB開発者</p>
+                                    <p class="developer-bio">写真家として世界を巡りながら、自身が代表を務める、伝統工芸「枡」のブランド「FOMUS」をグローバルに展開。現在はアイルランドを拠点に、言語の壁を超えた"文化の越境DX"を推進中。</p>
+                                </div>
+                            </div>
+                            <div class="developer-content">
+                                <h3>日本酒は、世界で最も<span class="accent-text">"伝えるのが難しい"</span>お酒かもしれません。</h3>
+                                <p class="intro-text">だからこそ、その魅力を"余すことなく"伝える仕組みが必要です。</p>
+                                <p class="intro-text">このサービスを開発した理由は、シンプルですが切実です。</p>
+                            </div>
+                        </div>
+                        <div class="mission-quote-card">
+                            <div class="quote-icon">💭</div>
+                            <blockquote class="elegant-quote">
+                                もっと多くの人に、日本酒の魅力を、<br>もっと正確に、もっと情熱を持って伝えたい。
+                            </blockquote>
+                        </div>
+                        <p class="conclusion-text">その思いが、すべての出発点でした。</p>
+                    </div>
+                    
+                    <div class="story-expand-section">
+                        <button class="story-expand-btn" onclick="toggleStorySection()">
+                            <span class="expand-icon">📖</span>
+                            <span class="expand-text">続きを見る</span>
+                            <span class="expand-arrow">▼</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="story-detailed-content" id="storyExpandableContent" style="display: none;">
+                    <div class="story-section-card">
+                        <div class="section-header-elegant">
+                            <div class="section-icon-elegant">💡</div>
+                            <h4>背景にある気づき</h4>
+                        </div>
+                        <div class="section-content-elegant">
+                            <p>私は、日本の伝統工芸「枡」を扱うブランドを運営しています。これまで多くの酒蔵関係者、日本酒ファンの方々と交流してきました。</p>
+                            <p>そのなかで何度も感じたのが、<strong class="highlight-elegant">"言語の壁による機会損失"</strong>です。</p>
+                            <div class="insight-card">
+                                <p>インバウンド需要が高まるなか、外国人観光客が日本酒に興味を持ち、酒蔵を訪れることも増えています。しかし、すべての酒蔵が多言語に対応できるわけではありません。英語だけでなく、フランス語、ドイツ語、イタリア語…。</p>
+                                <p class="insight-conclusion">どれだけ素晴らしい日本酒でも、それが正しく伝わらなければ、本当の想いは届きません。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-section-card">
+                        <div class="section-header-elegant">
+                            <div class="section-icon-elegant">🌸</div>
+                            <h4>専属の「AIソムリエ」が、あなたの蔵を支えます</h4>
+                        </div>
+                        <div class="section-content-elegant">
+                            <p>この課題を解決するために開発したのが、多言語対応の<strong class="highlight-elegant">AIチャットボット「サクラ」</strong>です。</p>
+                            <p>このチャットボットの最大の特長は、「あなただけのAIソムリエ」として機能すること。事前に、貴社の銘柄情報、商品写真、杜氏のコメント、社長の想いなどをヒアリングし、それらをサクラに組み込むことで——</p>
+                            <div class="example-card">
+                                <div class="example-header">
+                                    <span class="example-icon">💡</span>
+                                    <strong>例：「おすすめの純米酒は？」と聞かれたら</strong>
+                                </div>
+                                <p class="example-result">一般検索ではなく、あなたの蔵の純米酒だけを提案します。</p>
+                            </div>
+                            <p>つまり、検索結果に埋もれない、蔵専用のAIアシスタントが、お客様一人ひとりに寄り添って案内します。しかも、日本酒の基礎知識や専門用語にも対応可能。現場スタッフの手が回らない時でも、お客様は母国語で正確な情報を得ることができます。</p>
+                        </div>
+                    </div>
+
+                    <div class="story-section-card">
+                        <div class="section-header-elegant">
+                            <div class="section-icon-elegant">🚀</div>
+                            <h4>活用シーンは無限大</h4>
+                        </div>
+                        <div class="section-content-elegant">
+                            <p>このチャットボットは、QRコードでどこでも起動可能です。</p>
+                            <div class="use-cases-elegant">
+                                <div class="use-case-elegant">
+                                    <span class="use-case-icon-elegant">🏷️</span>
+                                    <span>商品ラベルや店頭POPに設置</span>
+                                </div>
+                                <div class="use-case-elegant">
+                                    <span class="use-case-icon-elegant">🏛️</span>
+                                    <span>酒蔵内の観光案内パネルに表示</span>
+                                </div>
+                                <div class="use-case-elegant">
+                                    <span class="use-case-icon-elegant">🌐</span>
+                                    <span>海外の展示会で、英語・フランス語対応の案内として</span>
+                                </div>
+                            </div>
+                            <div class="key-benefit-elegant">
+                                <p>たとえ現地に担当者が同行できなくても、チャットボットがあなたの代わりに想いを届けます。</p>
+                                <p class="benefit-highlight-elegant">"通訳がいなくても伝わる"——それが、このツールの最大の強みです。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-section-card">
+                        <div class="section-header-elegant">
+                            <div class="section-icon-elegant">💰</div>
+                            <h4>安心の価格設定で、伝える力を届けたい</h4>
+                        </div>
+                        <div class="section-content-elegant">
+                            <p class="price-intro">このシステムは、AIと最先端技術を活用しているため、</p>
+                            <div class="price-highlight-box">
+                                <div class="price-comparison">
+                                    <span class="price-label">一般的なWebサイト制作費の</span>
+                                    <span class="price-emphasis">約1/3以下</span>
+                                    <span class="price-label">で導入可能</span>
+                                </div>
+                                <p class="price-bonus">しかも、貴社専用AIソムリエ・チャットボットが最初からセットになっています。</p>
+                            </div>
+                            <div class="philosophy-card">
+                                <p>私たちは、"伝える力"に投資しやすい価格での提供を目指しました。</p>
+                                <p class="philosophy-highlight-elegant">蔵の規模に関係なく、「本気で届けたい想い」がある方には、全力で寄り添います。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-section-card final-card">
+                        <div class="section-header-elegant">
+                            <div class="section-icon-elegant">🍶</div>
+                            <h4>最後に──　日本酒に込められた「造り手の想い」をそのまま世界へ届けたい</h4>
+                        </div>
+                        <div class="section-content-elegant">
+                            <p>私はこれまで、多くの酒蔵と交流する中で確信しました。本気で造られた日本酒には、世界に誇れる力があると。</p>
+                            <div class="conviction-card">
+                                <p>でもその魅力が、言葉の壁で届かないままになってしまうのは、あまりにも惜しい。</p>
+                                <p>だからこそ、このサービスは、<strong class="highlight-elegant">"日本酒への想い"をそのままに、世界に伝えるための架け橋</strong>でありたいと思っています。</p>
+                            </div>
+                            <div class="final-message-card">
+                                <p>ぜひ一度、このサービスを体験してみてください。</p>
+                                <p class="cta-highlight-elegant">きっと、あなたの蔵の新しい一歩になります。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- SakeLink Introduction Section -->
+    <section class="sakelink-section" id="sakelink">
+        <div class="container">
+            <div class="sakelink-header">
+                <span class="section-tag">🍶 新サービス</span>
+                <h2 class="section-title">SakeLink のご案内</h2>
+                <p class="section-subtitle">Terroir HUB の新サービス「SakeLink」</p>
+            </div>
+            
+            <div class="sakelink-layout-top">
+                <div class="sakelink-features-section">
+                    <h3>日本酒に特化した多言語サイト構築パッケージ</h3>
+                    
+                    <div class="sakelink-features">
+                        <div class="feature-item" data-aos="fade-up">
+                            <div class="feature-icon">🌾</div>
+                            <div class="feature-text">
+                                <h4>精米歩合・原料米・酸度</h4>
+                                <p>細部まで丁寧に対応し、専門情報を分かりやすく表示</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-icon">🎨</div>
+                            <div class="feature-text">
+                                <h4>商品数・ブランドごとに専用設計</h4>
+                                <p>貴蔵の特色を活かしたオリジナルデザインを提供</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="feature-icon">📱</div>
+                            <div class="feature-text">
+                                <h4>展示会や売店にも使えるスマホ対応UI</h4>
+                                <p>QRコードで即座にアクセス、現場での活用をサポート</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">お名前 *</label>
-                        <input type="text" id="name" name="name" required>
+                <div class="sakelink-visual">
+                    <div class="sakelink-demo">
+                        <div class="demo-phone">
+                            <div class="demo-screen">
+                                <div class="demo-header">
+                                    <span class="demo-title">貴蔵 Premium Junmai</span>
+                                    <div class="demo-lang">🌐 EN | 中文 | 한국어</div>
+                                </div>
+                                <div class="demo-content">
+                                    <div class="demo-image"></div>
+                                    <div class="demo-info">
+                                        <div class="demo-specs">
+                                            <span>精米歩合: 60%</span>
+                                            <span>酸度: 1.3</span>
+                                            <span>原料米: 山田錦</span>
+                                        </div>
+                                        <div class="demo-taste-chart">
+                                            <span>味わいチャート</span>
+                                        </div>
+                                        <div class="demo-ai-chat">
+                                            <span>🤖 AIソムリエに質問</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+            
+            <div class="sakelink-layout-bottom">
+                <div class="sakelink-customization">
+                    <h3>完全カスタマイズ対応</h3>
+                    <p>SakeLink上のページは貴社ごとにカスタマイズ可能です。ラベルの世界観、商品説明、導線まで、すべて調整可能。</p>
+                    <ul>
+                        <li>ブランドイメージに合わせたデザイン</li>
+                        <li>継続的なコンテンツ更新サポート</li>
+                        <li>お酒の基礎知識と貴社の商品・企業情報を網羅し、全言語の質問に対応できるAIサクラを搭載</li>
+                    </ul>
+                </div>
+                
+                <div class="sakelink-cta">
+                    <a href="https://www.terroirhub.com/" class="btn-sakelink-special">
+                        <div class="btn-glow"></div>
+                        <div class="btn-content">
+                            <span class="btn-icon-special">🍶</span>
+                            <span class="btn-text-main">SakeLink の詳細を見る</span>
+                            <span class="btn-text-sub">今すぐ無料相談</span>
+                        </div>
+                        <div class="btn-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact/CTA Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-header">
+                <h2 class="section-title">まずは無料相談を</h2>
+                <p class="section-subtitle">想いを形にする第一歩を、一緒に踏み出しませんか？</p>
+            </div>
+            
+            <div class="contact-benefits">
+                <div class="benefit-item" data-aos="fade-up">
+                    <div class="benefit-icon">📝</div>
+                    <h3>商品情報がまとまっていなくてもOK</h3>
+                    <p>一緒に整理しながら進めていきます</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">🏠</div>
+                    <h3>小規模蔵、家族経営の方にもおすすめ</h3>
+                    <p>規模に関わらず丁寧にサポートします</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">📊</div>
+                    <h3>お見積もり／事例共有もお気軽に</h3>
+                    <p>具体的な効果や費用を事前にご確認</p>
+                </div>
+            </div>
+            
+            
+            <div class="contact-form-section">
+                <div class="contact-form">
+                    <h3>無料相談フォーム</h3>
+                    <form class="consultation-form" netlify name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <!-- Netlify spam protection -->
+                        <p style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">お名前 *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="brewery">蔵名・会社名</label>
+                                <input type="text" id="brewery" name="brewery">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">メールアドレス *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">電話番号</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="website">現在のWebサイト</label>
+                            <input type="url" id="website" name="website" placeholder="https://">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="consultation">ご相談内容</label>
+                            <textarea id="consultation" name="consultation" rows="4" placeholder="現在の課題やご要望をお聞かせください"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="meeting-preference">相談方法のご希望</label>
+                            <select id="meeting-preference" name="meeting-preference">
+                                <option value="email">まずはメールでやり取り</option>
+                                <option value="online">オンライン面談希望</option>
+                                <option value="phone">電話相談希望</option>
+                                <option value="visit">訪問相談希望</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">
+                            <span class="btn-icon">💬</span>
+                            無料相談を申し込む
+                        </button>
+                    </form>
                     
-                    <div class="form-group">
-                        <label for="company">会社名・蔵名</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">メールアドレス *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">電話番号</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">ご相談内容</label>
-                        <textarea id="message" name="message" rows="4" placeholder="現在の課題やご要望をお聞かせください"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-primary">無料相談を申し込む</button>
-                </form>
+                    <p class="privacy-note">
+                        🔒 お客様の情報は厳重に管理し、営業目的以外では使用いたしません
+                    </p>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -289,25 +835,56 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3>Terroir HUB</h3>
-                    <p>BY FOMUS</p>
+                    <div class="footer-logo">
+                        <span class="logo-text">Terroir HUB</span>
+                    </div>
+                    <p class="footer-description">
+                        味を生む背景を、世界と言葉でつなぐ。<br>
+                        日本のテロワールを、世界32言語で。
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
                 </div>
                 
-                <nav class="footer-nav">
-                    <a href="#features">Features</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#process">Process</a>
-                    <a href="#contact">Contact</a>
-                    <a href="about/">About Us</a>
-                </nav>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>サービス</h4>
+                        <ul>
+                            <li><a href="https://www.terroirhub.com/">SakeLink</a></li>
+                            <li><a href="#contact">無料相談</a></li>
+                            <li><a href="#scenes">活用事例</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>会社情報</h4>
+                        <ul>
+                            <li><a href="#story">ストーリー</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>サポート</h4>
+                        <ul>
+                            <li><a href="#contact">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Terroir HUB - Powered by FOMUS</p>
+                <p>&copy; 2025 Terroir HUB – Powered by FOMUS</p>
+                <p class="footer-tagline">🍶 日本のテロワール • 32言語対応 • AIソムリエ24h</p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
