@@ -56,6 +56,29 @@ function initMobileMenu() {
     }
 }
 
+// Mobile Menu Functions for new menu
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('active');
+}
+
+function closeMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.remove('active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(e) {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (mobileMenu && mobileMenuBtn && 
+        !mobileMenu.contains(e.target) && 
+        !mobileMenuBtn.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+    }
+});
+
 // Hero Image Slider
 function initHeroSlider() {
     const heroImages = document.querySelectorAll('.hero-image');
