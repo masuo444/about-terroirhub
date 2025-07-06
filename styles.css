@@ -3380,6 +3380,118 @@ body {
     align-items: center;
 }
 
+/* Mobile Responsive SakeLink Styles */
+@media (max-width: 768px) {
+    .sakelink-section {
+        padding: 3rem 0;
+    }
+    
+    .sakelink-layout-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .sakelink-layout-bottom {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .sakelink-features-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .sakelink-customization {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .sakelink-customization h3 {
+        font-size: 1.2rem;
+    }
+    
+    .sakelink-customization p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .sakelink-customization li {
+        padding: 0.3rem 0;
+        padding-left: 1.2rem;
+    }
+    
+    .sakelink-demo {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+    
+    .sakelink-features-section {
+        order: 2;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .feature-item .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .feature-text h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .feature-text p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .sakelink-section {
+        padding: 2rem 0;
+    }
+    
+    .sakelink-layout-top,
+    .sakelink-layout-bottom {
+        gap: 1.5rem;
+    }
+    
+    .sakelink-features-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .sakelink-customization {
+        padding: 1.2rem;
+    }
+    
+    .sakelink-customization h3 {
+        font-size: 1.1rem;
+    }
+    
+    .sakelink-customization p {
+        font-size: 0.95rem;
+    }
+    
+    .feature-item {
+        padding: 0.8rem;
+    }
+    
+    .feature-text h4 {
+        font-size: 1rem;
+    }
+    
+    .feature-text p {
+        font-size: 0.9rem;
+    }
+}
+
 .demo-phone {
     width: 240px;
     height: 480px;
