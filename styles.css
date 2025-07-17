@@ -1116,7 +1116,7 @@ body {
     color: white !important;
 }
 
-/* Special SakeLink CTA Button */
+/* Special TerroirHUB CTA Button */
 .btn-sakelink-special {
     position: relative;
     display: inline-flex;
@@ -2289,7 +2289,7 @@ body {
 .urgency-section {
     background: linear-gradient(135deg, rgba(231, 76, 60, 0.95), rgba(192, 57, 43, 0.95));
     color: white;
-    padding: 4rem;
+    padding: 2.5rem 3rem;
     border-radius: 25px;
     text-align: center;
     margin-top: 4rem;
@@ -3520,7 +3520,7 @@ body {
     font-weight: 700;
 }
 
-/* SakeLink Section */
+/* TerroirHUB Section */
 .sakelink-section {
     padding: 4rem 0;
     background: linear-gradient(135deg, #0ABAB5, #089a96);
@@ -3645,7 +3645,7 @@ body {
     align-items: center;
 }
 
-/* Mobile Responsive SakeLink Styles */
+/* Mobile Responsive TerroirHUB Styles */
 @media (max-width: 768px) {
     .sakelink-section {
         padding: 3rem 0;

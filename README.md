@@ -55,7 +55,7 @@ about terroirhub/
 
 合同会社FOMUS
 - 代表：まっすー
-- サービス：Terroir HUB / SakeLink
+- サービス：TerroirHUB
 
 ---
 
