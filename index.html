@@ -814,7 +814,7 @@
             <div class="contact-form-section">
                 <div class="contact-form">
                     <h3>無料相談フォーム</h3>
-                    <form class="consultation-form" netlify name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <form class="consultation-form" netlify name="contact" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" method="POST" action="/thanks">
                         <!-- Netlify spam protection -->
                         <p style="display: none;">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -860,6 +860,8 @@
                             </select>
                         </div>
                         
+                        <div data-netlify-recaptcha="true"></div>
+                        
                         <button type="submit" class="form-submit">
                             <span class="btn-icon">💬</span>
                             無料相談を申し込む
@@ -869,6 +871,14 @@
                     <p class="privacy-note">
                         🔒 お客様の情報は厳重に管理し、営業目的以外では使用いたしません
                     </p>
+                    
+                    <div class="contact-info" style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px; text-align: center;">
+                        <h4 style="margin-bottom: 1rem; color: #2c3e50;">メールでのお問い合わせ</h4>
+                        <p style="margin-bottom: 0.5rem; color: #666;">フォームが使えない場合は、直接メールでお問い合わせください</p>
+                        <a href="mailto:fomus.official@gmail.com" style="color: #0ABAB5; font-weight: 500; text-decoration: none;">
+                            📧 fomus.official@gmail.com
+                        </a>
+                    </div>
                 </div>
                 
             </div>

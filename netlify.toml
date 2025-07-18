@@ -1,0 +1,30 @@
+[build]
+  publish = "."
+
+[[forms]]
+  name = "contact"
+  action = "/thanks"
+  
+[forms.settings]
+  honeypot = "bot-field"
+  recaptcha = true
+
+[[notifications]]
+  type = "email"
+  event = "submission-created"
+  from = "noreply@netlify.com"
+  to = "fomus.official@gmail.com"
+  subject = "【TerroirHUB】新しいお問い合わせが届きました"
+  body = """
+新しいお問い合わせが届きました。
+
+お名前: {{name}}
+蔵名・会社名: {{brewery}}
+メールアドレス: {{email}}
+電話番号: {{phone}}
+現在のWebサイト: {{website}}
+ご相談内容: {{consultation}}
+相談方法のご希望: {{meeting-preference}}
+
+送信日時: {{created_at}}
+  """

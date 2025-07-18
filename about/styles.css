@@ -4211,3 +4211,39 @@ body {
 html {
     scroll-padding-top: 100px;
 }
+
+/* モバイル対応：ストーリーセクションのタイトル調整 */
+@media (max-width: 768px) {
+    .story-section .section-title {
+        white-space: normal !important;
+        font-size: 1.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-section .section-title {
+        font-size: 1.6rem !important;
+        line-height: 1.4;
+    }
+    
+    /* コンテナのパディング統一 */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* 基本フォントサイズ調整 */
+    body {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 360px) {
+    .story-section .section-title {
+        font-size: 1.4rem !important;
+    }
+    
+    .container {
+        padding: 0 0.75rem;
+    }
+}
